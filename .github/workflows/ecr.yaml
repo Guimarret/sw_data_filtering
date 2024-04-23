@@ -4,7 +4,7 @@ on:
     branches:
       - main
       - dev
-    paths: ['etl/*','Dockerfile']
+    paths: ['etl/*','Dockerfile', ".github/workflows/ecr.yaml"]
 jobs:
   Build:
     name: Build
