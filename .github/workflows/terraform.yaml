@@ -2,8 +2,7 @@ name: 'Terraform'
 
 on:
   push:
-    paths:
-        - ["terraform/*", ".github/workflows/terraform.yaml"]
+    paths: ["terraform/*", ".github/workflows/terraform.yaml"]
     branches: [ "main", "dev" ]
   pull_request:
 
