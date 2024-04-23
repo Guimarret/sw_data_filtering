@@ -30,3 +30,11 @@ resource "aws_s3_bucket_public_access_block" "public_access" {
   ignore_public_acls      = true
   restrict_public_buckets = true
 }
+
+resource "aws_s3_bucket" "dev-data-mesh" {
+  bucket = "dev-data-mesh"
+
+  lifecycle {
+    prevent_destroy = true
+  }
+}
