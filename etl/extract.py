@@ -8,5 +8,3 @@ def lambda_handler(event, context):
     except Exception as err:
         logging.error('Exception was thrown in getting data %s' % err)
     return
-
-lambda_handler(1,2)
