@@ -33,7 +33,7 @@ def get_data(api_urls:list):
         print(df.columns)
 
         try:
-            s3_url = f"s3://dev-data-mesh/sw_data_{api}.parquet" 
+            s3_url = f"s3://dev-data-mesh/data/sw_data_{api}.parquet" 
             df.to_parquet(s3_url, compression='snappy')
             logging.info(f"Sucessful ingestion on {s3_url}") 
         except Exception as err:
