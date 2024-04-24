@@ -23,7 +23,7 @@ resource "aws_glue_catalog_table" "aws_glue_catalog_table" {
 
     columns {
       name = "episode_id"
-      type = "int"
+      type = "bigint"
     }
     columns {
       name    = "opening_crawl"
@@ -50,47 +50,47 @@ resource "aws_glue_catalog_table" "aws_glue_catalog_table" {
 
     columns {
       name    = "characters"
-      type    = "string"
+      type    = "array<string>"
       comment = ""
     }
 
     columns {
       name    = "planets"
-      type    = "string"
+      type    = "array<string>"
       comment = ""
     }
     columns {
       name    = "starships"
-      type    = "string"
+      type    = "array<string>"
       comment = ""
     }
 
     columns {
       name    = "vehicles"
-      type    = "string"
+      type    = "array<string>"
       comment = ""
     }
 
     columns {
       name    = "species"
-      type    = "string"
+      type    = "array<string>"
       comment = ""
     }
     columns {
       name    = "created"
-      type    = "date"
+      type    = "string"
       comment = ""
     }
 
     columns {
       name    = "edited"
-      type    = "date"
+      type    = "string"
       comment = ""
     }
 
     columns {
       name    = "url"
-      type    = "int"
+      type    = "string"
       comment = ""
     }
   }
