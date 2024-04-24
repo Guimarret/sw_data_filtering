@@ -30,6 +30,7 @@ def get_data(api_urls:list):
                 processed_item = process_item(item)
                 flattened_data.append(processed_item)
         df = pd.DataFrame(flattened_data)
+        print(df.columns)
 
         try:
             s3_url = f"s3://dev-data-mesh/sw_data_{api}.parquet" 
