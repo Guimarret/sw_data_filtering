@@ -2,6 +2,8 @@
 
 ## Overview
 
+![Project Architecture](img/project_architecture.png)
+
 `Sw_data_filtering` is a data engineering project built for data mesh architecture, featuring multiple layers for efficient data processing and filtering. IAM policies are implemented to limit user access to tables and queries, enabling segregation between PII data and normal data. While Lambdas provide scalability, an EMR cluster is a superior option for real-time processing, although not implemented due to cost constraints.
 
 ## Technologies Used
