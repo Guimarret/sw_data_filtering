@@ -5,7 +5,6 @@ resource "aws_iam_role_policy_attachment" "lambda_attachment" {
 
 resource "aws_api_gateway_rest_api" "api" {
   name        = "api"
-  description = "An example API Gateway REST API"
 }
 
 resource "aws_api_gateway_resource" "resource" {
