@@ -20,8 +20,8 @@
 - **Lambda**: Used for data ingestion and processing.
 - **ECR (Elastic Container Registry)**: Stores Lambda function images built from Dockerfile.
 - **DynamoDB**: Used to lock Terraform state files while the written is made in S3.
-- **S3**: Used alongside DynamoDB to store Terraform state files, stores the lambda logs for airflow, stores the Athena database, and the data-mesh base files.
-- **Glue**: Utilized for data catalogs.
+- **S3**: Used alongside DynamoDB to store Terraform state files, stores the lambda logs for airflow, the Athena database, and the data-mesh base files.
+- **Glue**: Utilized for data catalogues.
 - **Athena**: Used for data visualization and querying.
 - **Network Settings**: Configured to facilitate communication for Lambdas.
 
@@ -36,7 +36,7 @@ The project architecture consists of the following components:
 
 ## Testing
 
-- **Local Testing**: Airflow DAGs can be tested locally using Astro. Simply place the DAGs in the appropriate folder (`dags`) and ensure Python packages used are installed.
+- **Local Testing**: Airflow DAGs can be tested locally using Astro. Simply place the DAGs in the appropriate folder (`dags`) and ensure the Python packages used are installed.
 - **Cloud Testing**: Testing in the cloud environment mirrors local testing procedures.
 
 ## Git Actions Configuration
@@ -60,7 +60,7 @@ To deploy and utilize the `Sw_data_filtering` project, follow these steps:
 
 1. Clone the repository.
 2. Configure AWS credentials and ensure Terraform is installed.
-3. Set up secrets in GitHub repository for CI/CD.
+3. Set up secrets in the GitHub repository for CI/CD.
 4. Modify Airflow DAGs as needed for specific data processing requirements.
 5. Run Terraform commands to provision infrastructure.
 6. Trigger CI/CD pipelines for deployment and testing.
@@ -69,3 +69,5 @@ To deploy and utilize the `Sw_data_filtering` project, follow these steps:
 ## Conclusion
 
 `Sw_data_filtering` is a comprehensive data engineering project leveraging cloud-native services and IAC practices to facilitate near real-time data processing and filtering. With proper configuration and setup, it provides a robust framework for handling large volumes of data efficiently.
+
+- Disclaimer: I didn't import the tables to glue and Athena beside the "films"
