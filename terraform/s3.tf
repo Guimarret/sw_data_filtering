@@ -46,8 +46,8 @@ resource "aws_s3_bucket" "lambda-logs-airflow" {
   }
 }
 
-resource "aws_s3_bucket" "athena_db" {
-  bucket = "athena_db"
+resource "aws_s3_bucket" "athena-db" {
+  bucket = "athena-db-sw"
   lifecycle {
     prevent_destroy = true
   }
