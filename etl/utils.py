@@ -3,6 +3,7 @@ import pandas as pd
 import json
 import httpx
 import logging
+import numpy as np
 
 def process_item(item):
     url_numeric_part = re.findall(r'\d+', item['url'])[0]
@@ -30,10 +31,9 @@ def get_data(api_urls:list):
                 processed_item = process_item(item)
                 flattened_data.append(processed_item)
         df = pd.DataFrame(flattened_data)
-        print(df.columns)
 
         try:
-            s3_url = f"s3://dev-data-mesh/data/sw_data_{api}.parquet" 
+            s3_url = f"s3://dev-data-mesh/data/sw_data_{api}/sw_data_{api}.parquet" 
             df.to_parquet(s3_url, compression='snappy')
             logging.info(f"Sucessful ingestion on {s3_url}") 
         except Exception as err:
