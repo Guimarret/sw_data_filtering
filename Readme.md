@@ -20,7 +20,7 @@
 - **Lambda**: Used for data ingestion and processing.
 - **ECR (Elastic Container Registry)**: Stores Lambda function images built from Dockerfile.
 - **DynamoDB**: Used to lock Terraform state files while the written is made in S3.
-- **S3**: Used alongside DynamoDB to store Terraform state files, stores the lambda logs for airflow, stores the athena database and the data-mesh base files .
+- **S3**: Used alongside DynamoDB to store Terraform state files, stores the lambda logs for airflow, stores the Athena database, and the data-mesh base files.
 - **Glue**: Utilized for data catalogs.
 - **Athena**: Used for data visualization and querying.
 - **Network Settings**: Configured to facilitate communication for Lambdas.
@@ -50,6 +50,10 @@ The project architecture consists of the following components:
 - **IAM Policies**: Implemented to restrict user access to specific tables and data types (e.g., PII data).
 - **Scalability**: Lambdas provide scalability; however, for real-time processing at scale, EMR clusters would be more suitable (not implemented due to cost considerations).
 
+## Logging
+
+- **CloudWatch**: Logs for Lambda functions, Airflow, and other AWS services are stored in CloudWatch for monitoring and troubleshooting purposes.
+
 ## Getting Started
 
 To deploy and utilize the `Sw_data_filtering` project, follow these steps:
@@ -65,4 +69,3 @@ To deploy and utilize the `Sw_data_filtering` project, follow these steps:
 ## Conclusion
 
 `Sw_data_filtering` is a comprehensive data engineering project leveraging cloud-native services and IAC practices to facilitate near real-time data processing and filtering. With proper configuration and setup, it provides a robust framework for handling large volumes of data efficiently.
-
