@@ -39,13 +39,6 @@ resource "aws_s3_bucket" "dev-data-mesh" {
   }
 }
 
-resource "aws_s3_bucket" "lambda-logs-airflow" {
-  bucket = "lambda-logs-for-airflow"
-  lifecycle {
-    prevent_destroy = true
-  }
-}
-
 resource "aws_s3_bucket" "athena-db" {
   bucket = "athena-db-sw"
   lifecycle {
